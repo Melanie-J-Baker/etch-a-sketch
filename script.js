@@ -1,8 +1,10 @@
 const grid = document.querySelector("#grid");
 const reset = document.querySelector("#reset");
 const changeSize = document.querySelector("#size");
+
 let size = 0;
 let gridBoxes;
+let color;
 
 function checkSize(size) {
     size = prompt("What size would you like the sides of the grid to be?");
@@ -15,7 +17,7 @@ function checkSize(size) {
     }
 }
 
-function createGrid(size) {
+function createGrid(size, color) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     
@@ -26,8 +28,11 @@ function createGrid(size) {
     }
     gridBoxes = document.querySelectorAll(".gridBox");
     gridBoxes.forEach((gridBox) => {
-        gridBox. addEventListener("mouseover", (e) => {
-            gridBox.classList.add("active");
+        gridBox.addEventListener("mouseover", function (e) {
+            let color =`hsl(${Math.floor(Math.random() * 360)}, 100% 50%)`;
+            e.target.style.backgroundColor = color;
+            console.log(`${color}`);
+            console.log(e.target);
         });
     });
 }
