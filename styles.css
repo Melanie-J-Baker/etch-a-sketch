@@ -5,13 +5,13 @@ html, body {
 
 h1 {
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Copperplate, sans-serif;
 }
 
 #grid {
     display: grid;
-    width: 960px;
-    height: 960px;
+    width: 800px;
+    height: 800px;
     grid-gap: 0;
     margin: auto;
     justify-content: stretch;
@@ -19,7 +19,7 @@ h1 {
 }
 
 .active {
-    background-image: linear-gradient(purple, teal, purple);
+    background-color: black;
 }
 
 button {
