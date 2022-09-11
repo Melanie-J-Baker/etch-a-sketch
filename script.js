@@ -30,26 +30,22 @@ function createGrid(size) {
     gridBoxes = document.querySelectorAll(".gridBox");
     gridBoxes.forEach((gridBox) => {
         gridBox.addEventListener("mouseover", () => {
-            gridBox.classList.add("active");
             let color = `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
-            let actives = document.querySelectorAll('.active');
-            for(const activeGrid of actives) {
-                activeGrid.style.setProperty('--background-color', color);
-            };
-            
+            gridBox.classList.add("active");
+            gridBox.style.setProperty('--background-color', color);
         });
     })
 }
 
 reset.addEventListener('click', (e) => {
     gridBoxes.forEach((gridBox) => {
-        gridBox.classList.remove("active");
+        gridBox.style.setProperty('--background-color', "white");
     });
 });
 
 changeSize.addEventListener('click', (e) => {
     gridBoxes.forEach((gridBox) => {
-        gridBox.classList.remove("active");
+        gridBox.style.setProperty('--background-color', "white");
     });
     checkSize(size);
 });

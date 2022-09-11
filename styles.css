@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    --background-color: black;
+    --background-color: white;
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
     border: 1.5px solid black;
 }
 
-.active {
+.gridBox {
     
     background-color: var(--background-color);
 }
